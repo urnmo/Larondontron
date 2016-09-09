@@ -8,8 +8,7 @@ body {
   justify-content: flex-end;
   width: 90%;
   height: 100%;
-  background-color: red;
-  border: solid black 2px;
+  border: solid silver 4px;
   border-radius: 3px; }
 
 #groups-box {
@@ -18,34 +17,25 @@ body {
   height: 100%;
   width: 40%; }
 
-#Humans-group {
+.groups {
   display: flex;
+  background-image: url("http://wallpapercave.com/wp/fQfPbak.jpg");
+  background-size: cover;
   justify-content: center;
+  align-items: center;
+  border-left: solid silver 3px;
+  border-right: solid silver 3px;
   height: 33.33%;
-  width: 100%;
-  background-color: white; }
-
-#Mutants-group {
-  display: flex;
-  justify-content: center;
-  height: 33.33%;
-  width: 100%;
-  background-color: purple; }
-
-#Cyborgs-group {
-  display: flex;
-  justify-content: center;
-  height: 33.33%;
-  width: 100%;
-  background-color: green; }
+  width: 100%; }
 
 #friends-box {
   display: flex;
+  background-image: url("http://smashingcage.com/wp-content/uploads/2013/03/Brushed-Metal-Wall-500x300.jpg");
+  background-size: cover;
   flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 60%;
-  border-radius: 10px; }
+  width: 60%; }
 
 #Search-box {
   width: 30%;
@@ -55,8 +45,16 @@ body {
 
 #content-zone {
   display: flex;
-  border: solid black 1px;
+  background-color: white;
+  border: solid silver 4px;
   border-radius: 10px;
   height: 80%;
   width: 90%;
   overflow: scroll; }
+
+.group-boxes {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  border: solid black 2px;
+  border-radius: 10px; }
