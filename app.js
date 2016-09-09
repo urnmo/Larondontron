@@ -7,15 +7,16 @@
 
 function getPeeps() {
     let request = new XMLHttpRequest();
-    request.open('GET', "http://damp-hamlet-50601.herokuapp.com");
+    request.open('GET', "https://damp-hamlet-50601.herokuapp.com/people");
 
     request.addEventListener('load', function () {
 
         //get the json and parse it
         let response = JSON.parse(request.responseText);
-
+console.log (response);
     })
         request.send();
+        
 }
 
 
