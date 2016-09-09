@@ -26,7 +26,8 @@ body {
   border-left: solid silver 3px;
   border-right: solid silver 3px;
   height: 33.33%;
-  width: 100%; }
+  width: 100%;
+  border: solid silver 1px; }
 
 #friends-box {
   display: flex;
