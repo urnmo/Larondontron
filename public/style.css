@@ -23,35 +23,40 @@ body {
   justify-content: center;
   height: 33.33%;
   width: 100%;
-  border: solid 1px black;
-  border-radius: 3px; }
+  background-color: white; }
 
 #Mutants-group {
   display: flex;
   justify-content: center;
   height: 33.33%;
   width: 100%;
-  border: solid 1px black;
-  border-radius: 3px; }
+  background-color: purple; }
 
 #Cyborgs-group {
   display: flex;
   justify-content: center;
   height: 33.33%;
   width: 100%;
-  border: solid 1px black;
-  border-radius: 3px; }
+  background-color: green; }
 
 #friends-box {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 60%; }
+  width: 60%;
+  border-radius: 10px; }
+
+#Search-box {
+  width: 30%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 10px; }
 
 #content-zone {
   display: flex;
   border: solid black 1px;
-  height: 90%;
+  border-radius: 10px;
+  height: 80%;
   width: 90%;
   overflow: scroll; }

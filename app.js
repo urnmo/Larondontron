@@ -4,7 +4,7 @@ let _ = require('lodash');
 //write the ajax request function
 
 
-function getPeeps() {
+function getPeeps() {         // GET PPL OBJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     let request = new XMLHttpRequest();
     request.open('GET', "https://damp-hamlet-50601.herokuapp.com/people");
 
@@ -15,10 +15,9 @@ console.log (response);
     })
         request.send();  
 }
+                             // GET @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-
-
-
+// POST GROUP @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
 
