@@ -4,7 +4,7 @@
 //write the ajax request function
 
 
-function getPeeps() {
+function getPeeps() {         // GET PPL OBJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     let request = new XMLHttpRequest();
     request.open('GET', "https://damp-hamlet-50601.herokuapp.com/people");
 
@@ -15,6 +15,7 @@ console.log (response);
     })
         request.send();  
 }
+                             // GET @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
 function getGroups() {
@@ -35,6 +36,11 @@ function getGroups() {
 //     request.open('POST', 'http://chat.queencityiron.com/messages');
 //     request.send(JSON.stringify(msg));
 // }
+// POST GROUP @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+
 
 
 
