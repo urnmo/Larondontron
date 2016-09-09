@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 600px; }
+
+#container {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  height: 100%;
+  background-color: red;
+  border: solid black 2px;
+  border-radius: 3px; }
+
+#groups-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 40%; }
+
+#Humans-group {
+  display: flex;
+  justify-content: center;
+  height: 33.33%;
+  width: 100%;
+  border: solid 1px black;
+  border-radius: 3px; }
+
+#Mutants-group {
+  display: flex;
+  justify-content: center;
+  height: 33.33%;
+  width: 100%;
+  border: solid 1px black;
+  border-radius: 3px; }
+
+#Cyborgs-group {
+  display: flex;
+  justify-content: center;
+  height: 33.33%;
+  width: 100%;
+  border: solid 1px black;
+  border-radius: 3px; }
+
+#friends-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60%; }
+
+#content-zone {
+  display: flex;
+  border: solid black 1px;
+  height: 90%;
+  width: 90%;
+  overflow: scroll; }
