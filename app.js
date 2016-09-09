@@ -1,4 +1,4 @@
-let _ = require('lodash');
+// let _ = require('lodash');
 
 
 //write the ajax request function
@@ -17,14 +17,24 @@ console.log (response);
 }
 
 
+function getGroups() {
+    let request = new XMLHttpRequest();
+    request.open('GET', "https://damp-hamlet-50601.herokuapp.com/group");
 
-
-
-
-
-
-
-
+    request.addEventListener('load', function () {
+        //get the json and parse it
+        let response = JSON.parse(request.responseText);
+        console.log("groups sent")
+        console.log (response);
+    })
+        request.send();   
+}
+// function postGroup(groups){
+// // post the group info
+//     let request = new XMLHttpRequest();
+//     request.open('POST', 'http://chat.queencityiron.com/messages');
+//     request.send(JSON.stringify(msg));
+// }
 
 
 
@@ -35,6 +45,10 @@ window.addEventListener('load', function() {
 console.log ('hello world');
 getPeeps();
 });
+
+
+
+
 // -populate the "friends" box--js 
 //      -parse json
 //      -pass data into a constructor
@@ -44,7 +58,7 @@ getPeeps();
 // -set up post fuction--js
     //-- on drop
     //--set up "codename" property and function
-    
+
 
 // -make boxes all scrollable --css
 
