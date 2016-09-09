@@ -8,8 +8,7 @@ body {
   justify-content: flex-end;
   width: 90%;
   height: 100%;
-  border: solid silver 4px;
-  border-radius: 3px; }
+  border: solid silver 4px; }
 
 #groups-box {
   display: flex;
@@ -23,8 +22,8 @@ body {
   background-size: cover;
   justify-content: center;
   align-items: center;
-  border-left: solid silver 3px;
-  border-right: solid silver 3px;
+  border-left: solid silver 4px;
+  border-right: solid silver 4px;
   height: 33.33%;
   width: 100%;
   border: solid silver 1px; }
