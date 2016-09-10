@@ -17,6 +17,8 @@ function getPeeps() {         // GET PPL OBJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         //make all li's draggable
         $('.peep').draggable({
             revert: true,
+            containment: $('#groups'),
+            helper: 'clone',
         });
 
         console.log($(".group-boxes"));
@@ -25,8 +27,8 @@ function getPeeps() {         // GET PPL OBJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             drop: function (event, ui) {
                 let peep = ui.draggable.text();
                 console.log('droppped bitches');
-            //what happens on drop is put here
-            //call post group function
+                //what happens on drop is put here
+                //call post group function
 
             }
         })
