@@ -11,8 +11,9 @@ function getPeeps() {         // GET PPL OBJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     request.addEventListener('load', function () {
         //get the json and parse it
         let response = JSON.parse(request.responseText);
+        console.log(response);
         for (let i = 0; i < response.length; i++) {
-            $('#friends-list').append('<li class="peep"><p><img src="' + response[i].photo + '"></p><h2>' + response[i].firstName + ' ' + response[i].lastName + '</h2><p>' + response[i].userName + '</p><p>' + response[i].gender + '</p><p>' + response[i].birthday + '</p></li>');
+            $('#friends-list').append('<li class="peep"><p><img src="' + response[i].photo + '"></p><h2>' + response[i].firstName + ' ' + response[i].lastName + '</h2><p class="username">' + response[i].userName + '</p><p>' + response[i].gender + '</p><p>' + response[i].birthday + '</p></li>');
         }
         //make all li's draggable
         $('.peep').draggable({
@@ -26,7 +27,8 @@ function getPeeps() {         // GET PPL OBJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         $(".group-boxes").droppable({
             drop: function (event, ui) {
                 console.log('drop');
-                let peep = ui.draggable.text();
+                // peep should be the user id. 
+                let peep = ui.draggable.find('.username').text();
                 let group = "";
                 $(this);
                 console.log($(this).attr('id'));
@@ -84,12 +86,15 @@ function getGroupID(num) {
 }
 
 function postGroup(user, group) {
+    console.log('what were sending: ' + user + ', ' + group);
     // post the group info
     let request = new XMLHttpRequest();
     request.open('POST', "https://damp-hamlet-50601.herokuapp.com/" + group);
     let msg = user;
     // request.send(JSON.stringify(msg));
-  console.log  (JSON.stringify(msg));
+  console.log  (JSON.stringify({
+      user: msg,
+    }));
 
     console.log(group);
     console.log(msg);
