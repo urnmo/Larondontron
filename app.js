@@ -14,7 +14,7 @@ function getPeeps() {         // GET PPL OBJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         console.log(response);
         for (let i = 0; i < response.length; i++) {
 
-            $('#friends-list').append('<li class="peep"><p><img src="' + response[i].photo + '"></p><h2>' + response[i].firstName + ' ' + response[i].lastName + '</h2><p class="username">' + response[i].userName + '</p><p>' + response[i].gender + '</p><p>' + response[i].birthday + '</p></li>');
+            $('#friends-list').append('<li class="peep"><p><img src="' + response[i].photo + '"></p><h2 class="friendsinfo">' + response[i].firstName + ' ' + response[i].lastName + '</h2><p class="username friendsinfo">' + response[i].userName + '</p><p class="friendsinfo">' + response[i].gender + '</p><p class="friendsinfo">' + response[i].birthday + '</p></li>');
 
     
         }
