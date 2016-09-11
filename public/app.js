@@ -66,24 +66,31 @@ function getGroups() {
     request.addEventListener('load', function () {
         //get the json and parse it
         let response = JSON.parse(request.responseText);
+        console.log(response);
+        for (let i = 0; i < response.length; i++) {
+            let groupName = response[i].groupName;
+            $('#groups-box').append('<div class="groups ' + groupName + 's-group"><div id="' + groupName + '" class="group-boxes ' + groupName + 's-box"><ul class="peepsNgroup"></ul></div></div>')
+        for (let j = 0; j < response[i].people.length; j++){
+            $('#'+ groupName + ' ul').append('<li class="peepNgroup">' + response[i].people[j].firstName + ' ' + response[i].people[j].lastName + '</li>')
+        }}
         console.log("groups sent")
         console.log(response);
     })
     request.send();
 }
 
-function getGroupID(num) {
-    let request = new XMLHttpRequest();
-    request.open('GET', "https://damp-hamlet-50601.herokuapp.com/group/" + num);
+// function getGroupID(num) {
+//     let request = new XMLHttpRequest();
+//     request.open('GET', "https://damp-hamlet-50601.herokuapp.com/group/" + num);
 
-    request.addEventListener('load', function () {
-        //get the json and parse it
-        let response = JSON.parse(request.responseText);
-        console.log("group id sent")
-        console.log(response);
-    })
-    request.send();
-}
+//     request.addEventListener('load', function () {
+//         //get the json and parse it
+//         let response = JSON.parse(request.responseText);
+//         console.log("group id sent")
+//         console.log(response);
+//     })
+//     request.send();
+// }
 
 function postGroup(user, group) {
     console.log('what were sending: ' + user + ', ' + group);
@@ -91,7 +98,7 @@ function postGroup(user, group) {
     let request = new XMLHttpRequest();
     request.open('POST', "https://damp-hamlet-50601.herokuapp.com/" + group);
     let msg = user;
-    // request.send(JSON.stringify(msg));
+    // request.send(JSON.stringify({ user: msg }));
   console.log  (JSON.stringify({
       user: msg,
     }));
@@ -113,7 +120,7 @@ window.addEventListener('load', function () {
     console.log('hello world');
     getPeeps();
     getGroups();
-    getGroupID(1);
+
 
 });
 
