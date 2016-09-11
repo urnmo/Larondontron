@@ -43,7 +43,7 @@ function getPeeps() {         // GET PPL OBJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                     group = "2";
                 } else {
                     if ($(this).attr('id') === "cyborg") {
-                        console.log('human');
+                        console.log('cyborg');
                         group = "3";
                     }
                 }
