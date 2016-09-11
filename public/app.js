@@ -23,14 +23,31 @@ function getPeeps() {         // GET PPL OBJECTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
         console.log($(".group-boxes"));
         //make the dropzones droppable
-        $(".group-boxes Humans-box").droppable({
+        $(".group-boxes").droppable({
             drop: function (event, ui) {
+                console.log('drop');
                 let peep = ui.draggable.text();
-                console.log('droppped bitches');
+                let group = "";
+                $(this);
+                console.log($(this).attr('id'));
+                if ($(this).attr('id') === 'human') {
+                    console.log('human');
+                    group = "1";
+                } else if ($(this).attr('id') === "mutant") {
+                    console.log('mutant');
+                    group = "2";
+                } else {
+                    if ($(this).attr('id') === "cyborg") {
+                        console.log('human');
+                        group = "3";
+                    }
+                }
+                console.log(this);
+                postGroup(peep, group);
                 //what happens on drop is put here
                 //call post group function
-
             }
+
         })
         console.log(response);
 
@@ -70,16 +87,17 @@ function postGroup(user, group) {
     // post the group info
     let request = new XMLHttpRequest();
     request.open('POST', "https://damp-hamlet-50601.herokuapp.com/" + group);
-    request.send(JSON.stringify(msg));
+    let msg = user;
+    // request.send(JSON.stringify(msg));
+  console.log  (JSON.stringify(msg));
+
+    console.log(group);
+    console.log(msg);
 
     // ---msg needs to be an object with user id and group id
 
 }
 // POST GROUP @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-
-
-
 
 
 
@@ -91,6 +109,7 @@ window.addEventListener('load', function () {
     getPeeps();
     getGroups();
     getGroupID(1);
+
 });
 
 
