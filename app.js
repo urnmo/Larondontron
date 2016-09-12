@@ -99,7 +99,7 @@ function postGroup(user, group) {
     console.log('what were sending: ' + user + ', ' + group);
     // post the group info
     let request = new XMLHttpRequest();
-    request.open('POST', "https://damp-hamlet-50601.herokuapp.com/" + group);
+    request.open('POST', "https://damp-hamlet-50601.herokuapp.com/" + group + "/" + user);
     let msg = user;
     // request.send(JSON.stringify({ user: msg }));
   console.log  (JSON.stringify({
