@@ -81,3 +81,6 @@ body {
 
 .turnRed {
   background-color: orangered; }
+
+.hidden {
+  display: none; }
